@@ -27,6 +27,29 @@ div,nav-content {
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
+    COLLAPSIBLE TEXT CONTENT
+    ——————————————————————————————————————————————————————————————————————————— */
+
+button.collapsible {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
     NAVIGATION
     ——————————————————————————————————————————————————————————————————————————— */
 
@@ -44,8 +67,9 @@ html {
 }
 
 body {
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 2.2rem;
+    font-weight: 100;
 }
 
 /* so now in most browsers:
