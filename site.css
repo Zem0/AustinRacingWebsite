@@ -45,8 +45,9 @@ button.collapsible {
 }
 
 .collapsible-content {
-    display: none;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height .5s;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
