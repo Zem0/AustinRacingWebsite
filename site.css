@@ -42,6 +42,8 @@ button.collapsible {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: auto;
+    margin-right: 0;
 }
 
 .collapsible-content {
@@ -56,6 +58,50 @@ button.collapsible {
 
 nav .logo {
     width: 10rem;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    PARALLAX
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+}
+
+parallax-group {
+    position: relative;
+    height: 500px;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax-layer-base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 1;
+}
+
+.parallax-layer-back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px) scale(2);
+    background-image: url("images/Cross-Background.png");
+    background-size: cover;
+    opacity: .7;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
@@ -85,8 +131,21 @@ h1, h2 {
     line-height: 1.2;
 }
 
+h3 {
+    letter-spacing: 1;
+    margin-top: 0;
+}
+
 .bold-text {
     font-weight: 900;
+}
+
+.white-text {
+    color: #fff;
+}
+
+p {
+    color: #c6c6c6
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
