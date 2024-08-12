@@ -1,0 +1,36 @@
+:root {
+    --gap: .6rem;
+    --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
+    --mobile-grid: [full-start] minmax(11px, 11px) [wide-start] minmax(11px, 11px) [main-start] min(980px, 100% - 44px) [main-end] minmax(11px, 11px) [wide-end] minmax(11px, 11px) [full-end];
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    grid-template-columns: var(--default-grid);
+}
+
+div.section-content {
+    color: var(--red);
+    grid-column-start: main-start;
+    grid-column-end: main-end;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    TYPOGRAPHY
+    ——————————————————————————————————————————————————————————————————————————— */
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/* so now in most browsers:
+0.8rem = 8px
+1rem = 10px
+1.2rem = 12px
+2.2rem = 22px
+etc */
