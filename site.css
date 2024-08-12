@@ -8,15 +8,30 @@
     box-sizing: border-box;
 }
 
-section {
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+section,
+nav {
     display: grid;
     grid-template-columns: var(--default-grid);
 }
 
-div.section-content {
+div.section-content,
+div,nav-content {
     color: var(--red);
     grid-column-start: main-start;
     grid-column-end: main-end;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    NAVIGATION
+    ——————————————————————————————————————————————————————————————————————————— */
+
+nav .logo {
+    width: 10rem;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
@@ -28,9 +43,19 @@ html {
     font-family: sans-serif;
 }
 
+body {
+    line-height: 1.5;
+    font-size: 2.2rem;
+}
+
 /* so now in most browsers:
 0.8rem = 8px
 1rem = 10px
 1.2rem = 12px
 2.2rem = 22px
 etc */
+
+h1 {
+    font-size: 7rem;
+    line-height: 1.2;
+}
