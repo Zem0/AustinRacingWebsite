@@ -20,6 +20,7 @@ b {
 body {
     background-color: #000;
     color: #fff;
+    margin:0;
 }
 
 .columns {
@@ -132,14 +133,10 @@ nav .logo {
     perspective: 1px;
 }
 
-parallax-group {
+.parallax-group {
     position: relative;
-    height: 500px;
     height: 100vh;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
 }
 
 .parallax-layer {
@@ -161,7 +158,7 @@ parallax-group {
     transform: translateZ(-1px) scale(2);
     background-image: url("images/Cross-Background.png");
     background-size: cover;
-    opacity: .7;
+    opacity: .55;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
