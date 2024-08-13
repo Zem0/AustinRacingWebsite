@@ -1,16 +1,40 @@
 :root {
-    --gap: .6rem;
+    --gap: 2rem;
     --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
     --mobile-grid: [full-start] minmax(11px, 11px) [wide-start] minmax(11px, 11px) [main-start] min(980px, 100% - 44px) [main-end] minmax(11px, 11px) [wide-end] minmax(11px, 11px) [full-end];
+    --padded-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(1332px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
 }
 
 * {
     box-sizing: border-box;
 }
 
+b {
+    color: #fff;
+}
+
+.block {
+    display: block;
+}
+
 body {
     background-color: #000;
     color: #fff;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    font-size: 1.8rem;
+    margin-block: 8rem 4rem;
+    justify-content: space-between;;
+}
+
+.columns > * {
+    width: 30%;
+    min-width: 21.4rem;
 }
 
 section,
@@ -25,6 +49,38 @@ div,nav-content {
     grid-column-start: main-start;
     grid-column-end: main-end;
 }
+
+section {
+    margin-block: 2rem;
+}
+
+section:not(.padded, .image) {
+    padding-block-end: 8rem;
+}
+
+section.image {
+    display:block
+}
+
+section.image img {
+    width: 100%;
+}
+
+section.padded {
+    padding-block: 7rem;
+    background-color: #161616;
+    grid-template-columns: var(--padded-grid);
+}
+
+section.padded .section-content {
+    padding: 7rem;
+    background-color: #000;
+    border-radius: 4rem;
+}
+
+/* ul {
+    padding: 0;
+} */
 
 /*  ———————————————————————————————————————————————————————————————————————————
     COLLAPSIBLE TEXT CONTENT
@@ -44,6 +100,10 @@ button.collapsible {
     cursor: pointer;
     margin: auto;
     margin-right: 0;
+}
+
+button.collapsible i {
+    padding: 3px 0 0 2px;
 }
 
 .collapsible-content {
@@ -126,12 +186,19 @@ body {
 2.2rem = 22px
 etc */
 
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #EA621E, #ffe600);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h1, h2 {
     font-size: 7rem;
     line-height: 1.2;
 }
 
-h3 {
+h3, h4 {
     letter-spacing: 1;
     margin-top: 0;
 }
@@ -158,6 +225,8 @@ p {
 
 .video-header video {
     width: 100%;
+    -webkit-filter: brightness(1.5);
+    filter: brightness(1.5);
 }
 
 .video-header .clip-text {
