@@ -120,6 +120,69 @@ button.collapsible i {
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
+    IMAGE CAROUSEL
+    ——————————————————————————————————————————————————————————————————————————— */
+
+/* normal carousel NON HOVER styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    z-index: 10001;
+}
+
+.carousel-content {
+    display: flex;
+    margin: 150px 0 70px;
+    transition: 500ms;
+}
+
+@media(max-width: 1024px) {
+    .carousel-content {
+        margin: 100px 0 50px;
+    }
+}
+
+@media(max-width: 800px) {
+    .carousel-content {
+        margin: 70px 0 30px;
+    }
+}
+
+.carousel-content img {
+    height: 110vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    object-fit: cover;
+}
+
+.carousel-content video {
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    object-fit: fill;
+}
+
+.carousel .carousel-control-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel .carousel-control-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
     NAVIGATION
     ——————————————————————————————————————————————————————————————————————————— */
 nav {
