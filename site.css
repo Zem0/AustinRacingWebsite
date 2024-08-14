@@ -216,6 +216,11 @@ p {
     VIDEO HEADER
     ——————————————————————————————————————————————————————————————————————————— */
 
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
 .video-header {
     position: relative;
 }
@@ -224,12 +229,14 @@ p {
     width: 100%;
     -webkit-filter: brightness(1.5);
     filter: brightness(1.5);
+    max-width: 120rem;
 }
 
 .video-header .clip-text {
     position: absolute;
     top: 0;
     width: 100%;
+    max-width: 120rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -247,4 +254,10 @@ p {
     font-weight: 900;
     font-family: helvetica;
     margin: 0;
+}
+
+@media screen and (min-width: 1240px) {
+    .video-header .clip-text p {
+        font-size: 260px;
+    }
 }
