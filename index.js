@@ -6,8 +6,10 @@ for (i = 0; i < collapsible.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.maxHeight === "2000px") {
       content.style.maxHeight = "0";
+      content.style.opacity = "0";
     } else {
       content.style.maxHeight = "2000px";
+      content.style.opacity = "1";
     }
   });
 }
