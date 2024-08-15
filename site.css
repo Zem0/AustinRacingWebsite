@@ -189,8 +189,11 @@ button.collapsible i {
     NAVIGATION
     ——————————————————————————————————————————————————————————————————————————— */
 nav {
+    top: 0;
+    position: sticky;
     background-color: #000;
-    padding-top: 5rem;
+    padding-top: 1rem;
+    z-index: 1000;
 }
 
 nav a {
@@ -200,8 +203,9 @@ nav a {
 nav .nav-content {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--gap);
+    width: 100%;
 }
 
 nav .logo {
@@ -213,6 +217,8 @@ nav ul {
     padding: 0;
     gap: var(--gap);
     list-style-type: none;
+    width: 100%;
+    justify-content: space-between;
 }
 
 nav ul li {
@@ -276,6 +282,20 @@ nav ul li:hover {
     background-image: url("images/Cross-Background.png");
     background-size: cover;
     opacity: .25;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    SALES BANNER
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.banner {
+    font-size: 3vw;
+    background-color: #fff;
+    color: #000;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
@@ -465,3 +485,24 @@ p {
         font-size: 260px;
     }
 }
+
+@media screen and (max-width: 574px) {
+    nav {
+        display: none;
+    }
+}
+
+/* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
+@media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+        font-size: 3rem;
+    }
+}
+
+/* 1284×2778 pixels at 460ppi */
+@media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+        body {
+            font-size: 6rem;
+            color: red;
+        }
+    }
