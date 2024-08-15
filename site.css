@@ -126,6 +126,55 @@ button.active {
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
+    FOOTER
+    ——————————————————————————————————————————————————————————————————————————— */
+
+footer {
+    background: #fff;
+    color: #000;
+    display: grid;
+    padding-block: 7rem;
+    grid-template-columns: var(--padded-grid);
+    border-bottom: 2rem solid #dbd81e;
+}
+
+footer h4,
+footer h3,
+footer p,
+footer ul {
+    color: 575759;
+}
+
+footer .logo-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .section-content {
+    display: flex;
+}
+
+footer .section-content > * {
+    width: 50%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 652px) {
+    footer .section-content {
+        flex-direction: column;
+    }
+
+    footer .section-content > div {
+        width: 100%;
+    }
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
     IMAGE CAROUSEL
     ——————————————————————————————————————————————————————————————————————————— */
 
@@ -430,12 +479,16 @@ h3, h4 {
     text-align: center;
 }
 
-.white-text {
-    color: #fff;
-}
-
 p {
     color: #c6c6c6
+}
+
+.smaller-text {
+    font-size: 1.8rem;
+}
+
+.white-text {
+    color: #fff;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
