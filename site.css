@@ -110,10 +110,12 @@ button {
     cursor: pointer;
     margin: auto;
     margin-right: 0;
+    transform: rotate(0deg);
+    transition: transform cubic-bezier(0.5, 0, 0.5, 1) .2s;
 }
 
-button.collapsible i {
-    padding: 3px 0 0 2px;
+button.active {
+    transform: rotate(180deg)
 }
 
 .collapsible-content {
