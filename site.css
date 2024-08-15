@@ -309,7 +309,7 @@ nav ul li:hover {
 
 .parallax-group {
     position: relative;
-    height: 200vh;
+    height: 350vh;
     transform-style: preserve-3d;
 }
 
