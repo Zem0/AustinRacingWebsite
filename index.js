@@ -111,3 +111,46 @@ if (document.querySelectorAll(".carousel").length > 0) {
     carouselClick();
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollContainer = document.querySelector('.card-wrapper');
+  const leftButton = document.querySelector('.scroll-button.left');
+  const rightButton = document.querySelector('.scroll-button.right');
+
+  function getCardWidthWithMargin() {
+      const card = scrollContainer.querySelector('.card');
+      const cardStyle = getComputedStyle(card);
+      const cardWidth = card.offsetWidth;
+      const cardMarginRight = parseInt(cardStyle.marginRight);
+      return cardWidth + cardMarginRight;
+  }
+
+  function scrollToNextCard(direction) {
+      const cardWidthWithMargin = getCardWidthWithMargin();
+      const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
+      const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
+
+      // Adjust scrolling position to include padding
+      if (direction === 1) {
+          scrollContainer.scrollBy({ left: cardWidthWithMargin, behavior: 'smooth' });
+      } else {
+          scrollContainer.scrollBy({ left: -cardWidthWithMargin, behavior: 'smooth' });
+      }
+  }
+
+  function updateButtons() {
+      const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
+      const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
+
+      leftButton.disabled = scrollContainer.scrollLeft <= paddingLeft;
+      rightButton.disabled = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - paddingRight;
+  }
+
+  leftButton.addEventListener('click', () => scrollToNextCard(-1));
+  rightButton.addEventListener('click', () => scrollToNextCard(1));
+  scrollContainer.addEventListener('scroll', updateButtons);
+
+  // Initial button state
+  updateButtons();
+});
