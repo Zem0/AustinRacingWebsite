@@ -573,6 +573,10 @@ p {
     section:not(.image) {
         padding-block: 5rem;
     }
+
+    .columns > * {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 574px) {
@@ -588,6 +592,9 @@ p {
     }
     nav {
         display: none;
+    }
+    #intro {
+        color: greenyellow;
     }
 }
 
