@@ -96,6 +96,7 @@ section.without-grid {
     ——————————————————————————————————————————————————————————————————————————— */
 
 button {
+    opacity: .8;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -110,7 +111,11 @@ button {
     margin: auto;
     margin-right: 0;
     transform: rotate(0deg);
-    transition: transform cubic-bezier(0.5, 0, 0.5, 1) .2s;
+    transition: transform cubic-bezier(0.5, 0, 0.5, 1) .2s, opacity .2s;
+}
+
+button:hover {
+    opacity: 1;
 }
 
 button.active {
@@ -435,15 +440,15 @@ nav ul li:hover {
     TYPOGRAPHY
     ——————————————————————————————————————————————————————————————————————————— */
 
-html {
-    font-size: 62.5%;
-    font-family: sans-serif;
-}
-
 body {
     line-height: 1.6;
     font-size: 2.2rem;
     font-weight: 100;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
 }
 
 /* so now in most browsers:
@@ -560,6 +565,16 @@ p {
     }
 }
 
+@media screen and (max-width: 700px) {
+    section.padded .section-content {
+        padding: 5rem;
+    }
+
+    section:not(.image) {
+        padding-block: 5rem;
+    }
+}
+
 @media screen and (max-width: 574px) {
     nav {
         display: none;
@@ -570,6 +585,9 @@ p {
 @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3) {
     body {
         font-size: 3rem;
+    }
+    nav {
+        display: none;
     }
 }
 
