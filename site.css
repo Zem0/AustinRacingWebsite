@@ -586,7 +586,7 @@ p {
 }
 
 /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
-@media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 430px) and (-webkit-device-pixel-ratio: 3) {
     body {
         font-size: 3rem;
     }
@@ -605,3 +605,9 @@ p {
             color: red;
         }
     }
+
+@media only screen
+    and (device-width: 430px)
+    and (device-height: 932px)
+    and (-webkit-device-pixel-ratio: 3) {
+}
