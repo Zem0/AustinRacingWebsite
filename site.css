@@ -142,11 +142,18 @@ footer {
     border-bottom: 2rem solid #dbd81e;
 }
 
+footer a {
+    text-decoration: none;
+    color: #8f9011;
+    transition: color .2s;
+}
+
 footer h4,
 footer h3,
 footer p,
-footer ul {
-    color: 575759;
+footer ul,
+footer a:hover {
+    color: #575759;
 }
 
 footer .logo-holder {
@@ -313,7 +320,7 @@ nav ul li:hover {
 
 .parallax-group {
     position: relative;
-    height: 350vh;
+    height: 450vh;
     transform-style: preserve-3d;
 }
 
@@ -337,7 +344,7 @@ nav ul li:hover {
     transform: translateZ(-1px) scale(2);
     background-image: url("images/Cross-Background.png");
     background-size: cover;
-    opacity: .25;
+    opacity: .35;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
@@ -682,6 +689,11 @@ p {
     }
 }
 
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    MEDIA QUERIES
+    ——————————————————————————————————————————————————————————————————————————— */
+
 @media screen and (max-width: 700px) {
     section.padded .section-content {
         padding: 5rem;
@@ -705,6 +717,9 @@ p {
 /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
 @media only screen and (device-width: 430px) and (-webkit-device-pixel-ratio: 3),
 only screen and (device-width: 393px) and (-webkit-device-pixel-ratio: 3), only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    -webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
     section.padded .section-content {
         padding: 6rem;
     }
