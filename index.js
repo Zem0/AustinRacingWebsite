@@ -23,15 +23,15 @@ for (i = 0; i < collapsible.length; i++) {
 // // Set the height of the target element to match the body height
 // targetElement.style.height = bodyHeight + 'px';
 
-document.addEventListener("DOMContentLoaded", function() {
-    var bodyHeight = document.body.offsetHeight;
-    var targetElement = document.getElementsByClassName("parallax-layer-back");
-    if (targetElement) {
-        targetElement.style.height = bodyHeight + 'px';
-    } else {
-        console.error('Element with id "targetElement" not found.');
-    }
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     var bodyHeight = document.body.offsetHeight;
+//     var targetElement = document.getElementsByClassName("parallax-layer-back");
+//     if (targetElement) {
+//         targetElement.style.height = bodyHeight + 'px';
+//     } else {
+//         console.error('Element with id "targetElement" not found.');
+//     }
+// });
 
 // image carousel
 if (document.querySelectorAll(".carousel").length > 0) {
@@ -39,13 +39,9 @@ if (document.querySelectorAll(".carousel").length > 0) {
   carousels.forEach(carousel => newCarousel(carousel));
 
   function newCarousel(carousel) {
-    let carouselChildren = document.querySelector(
-      `.carousel[data-carousel="${carousel.dataset.carousel}"]`
-    ).children;
+    let carouselChildren = carousel.children;
     let speed = carousel.dataset.speed;
-    let carouselContent = document.querySelectorAll(`.carousel-content`)[
-      carousel.dataset.carousel - 1
-    ];
+    let carouselContent = carousel.querySelector('.carousel-content');
     const carouselLength = carouselContent.children.length;
     let width = window.innerWidth;
     let count = width;

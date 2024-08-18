@@ -306,7 +306,7 @@ nav ul li:hover {
 .parallax {
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     -webkit-perspective: 1px;
     perspective: 1px;
 }
