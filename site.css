@@ -186,7 +186,7 @@ footer ul {
 .carousel {
     position: relative;
     overflow: hidden;
-    z-index: 10001;
+    /* z-index: 10001; */
 }
 
 .carousel-content {
@@ -329,6 +329,7 @@ nav ul li:hover {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 1;
+    height: max-content;
 }
 
 .parallax-layer-back {
@@ -487,6 +488,13 @@ p {
     color: #c6c6c6
 }
 
+.sale-heading {
+    font-size: 2.4rem;
+    font-weight: 900;
+    display: table;
+    margin: auto;
+}
+
 .smaller-text {
     font-size: 1.8rem;
 }
@@ -586,28 +594,50 @@ p {
 }
 
 /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
-@media only screen and (device-width: 430px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 430px) and (-webkit-device-pixel-ratio: 3),
+only screen and (device-width: 393px) and (-webkit-device-pixel-ratio: 3), only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    section.padded .section-content {
+        padding: 6rem;
+    }
     body {
-        font-size: 3rem;
+        font-size: 4rem;
+        font-weight: 500;
     }
     nav {
         display: none;
     }
-    #intro {
-        color: greenyellow;
+    .columns > * {
+        width: 100%;
+        font-size: 3.5rem;
     }
-}
-
-/* 1284×2778 pixels at 460ppi */
-@media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
-        body {
-            font-size: 6rem;
-            color: red;
-        }
+    .card {
+        min-width: 80vw;
+        font-size: 3.5rem;
+        padding: 6rem;
+        border-radius: 4rem;
     }
-
-@media only screen
-    and (device-width: 430px)
-    and (device-height: 932px)
-    and (-webkit-device-pixel-ratio: 3) {
+    .scroll-control-holder {
+        display: none;
+    }
+    section.without-grid:has(.scroll-container) {
+        padding-block: 0;
+        padding-block-end: 10rem;
+    }
+    button {
+        width: 8rem;
+        height: 8rem;
+        font-size: 4rem;
+    }
+    footer .section-content {
+        flex-direction: column;
+    }
+    footer .section-content > * {
+        width: 100%;
+    }
+    .smaller-text {
+        font-size: 3.6rem;
+    }
+    .video-header .clip-text {
+        height: calc(100% + 1px);
+    }
 }
