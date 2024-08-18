@@ -154,3 +154,27 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial button state
   updateButtons();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all Vimeo iframes
+  const iframes = document.querySelectorAll('.video-wrapper iframe');
+
+  // Create a new Intersection Observer
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          const iframe = entry.target;
+          const player = new Vimeo.Player(iframe);
+
+          if (entry.isIntersecting) {
+              // If the iframe is in view, play the video
+              player.play();
+          } else {
+              // If the iframe is out of view, pause the video
+              player.pause();
+          }
+      });
+  }, { threshold: 0.5 });
+
+  // Observe each iframe
+  iframes.forEach(iframe => observer.observe(iframe));
+});

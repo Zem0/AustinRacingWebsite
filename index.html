@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="site.css">
         <script src="https://kit.fontawesome.com/264685ff43.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="index.js" defer></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
 
         <meta name="format-detection" content="telephone=no">
     </head>
@@ -106,7 +107,21 @@
                         </div>
                     </section>
                     <section class="image">
-                        <img class="logo" src="images/Release-Poster-2.jpg" alt="">
+                        <div class="carousel" data-carousel="1" data-speed="2000">
+                            <span class="carousel-control-left"></span>
+                            <span class="carousel-control-right"></span>
+                            <div class="carousel-content">
+                                <!-- For the hover effect to work the last and first images are repeated at the beginning and the end respectively -->
+                                <img src="images/Release-Poster-2.jpg" alt="image 6" />
+                                <img src="images/Exhaust5.png" alt="image 1" />
+                                <img src="images/Exhaust6.png" alt="image 2" />
+                                <img src="images/Exhaust7.png" alt="image 3" />
+                                <img src="images/Exhaust8.png" alt="image 4" />
+                                <img src="images/Exhaust9.png" alt="image 5" />
+                                <img src="images/Release-Poster-2.jpg" alt="image 6" />
+                                <img src="images/Exhaust5.png" alt="image 1" />
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <div class="section-content">
@@ -229,6 +244,16 @@
                             </div>
                         </div>
                     </section>
+                    <div class="video-section">
+                        <div class="video-container">
+                            <video loop autoplay muted playsinline>
+                                <source src="videos/RS22.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-text">
+                                <p>Enhance power, reduce weight, and improve the overall riding experience</p>
+                            </div>
+                        </div>
+                    </div>
                     <section class="padded social-links">
                         <div>
                             <span class="sub-heading gradient-text">Visit The Austin Racing Social Accounts For More Info</span>

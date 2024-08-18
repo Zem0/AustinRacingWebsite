@@ -619,7 +619,46 @@ p {
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
-    VIMEO HEADER
+    VIDEO SECTION
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.video-section {
+    position: relative;
+}
+
+.video-section video {
+    width: 100%;
+    -webkit-filter: brightness(1.5);
+    filter: grayscale(1);
+    /* max-width: 120rem; */
+}
+
+.video-section .video-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 120rem;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-section .video-text p {
+    font-size:8vw;
+    line-height: 10vw;
+    line-height: 1;
+    font-weight: 900;
+    font-family: helvetica;
+    margin: 0;
+    color: #fff;
+    mix-blend-mode: multiply;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    VIMEO SECTION
     ——————————————————————————————————————————————————————————————————————————— */
 
 .video-wrapper {
