@@ -438,6 +438,76 @@ nav ul li:hover {
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
+    SOCIAL SECTION
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.social-links > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links .section-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-links .section-content i {
+    font-size: 11vw;
+    color: #fff;
+    transition: all .2s;
+    background: none;
+}
+
+@media screen and (min-width: 730px) {
+    .social-links .section-content i {
+        font-size: 8rem;
+    }
+}
+
+.social-links .section-content i:hover {
+    transform:scale(1.2)
+}
+
+.social-links .sub-heading {
+    margin-block-end: 4rem;
+}
+
+
+i.fa-youtube:hover {
+    color: #FF0000;
+}
+
+i.fa-instagram:hover {
+    background: #fff;
+    background: linear-gradient(
+        to right,
+        #fff,#fff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+i.fa-instagram:hover {
+    background: #833ab4;
+    background: linear-gradient(
+        to right,
+        #833ab4,#fd1d1d,#fcb045
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+i.fa-facebook:hover {
+    color: #0866FF;
+}
+
+i.fa-compass:hover {
+    color: #02B9FF;
+}
+
+/*  ———————————————————————————————————————————————————————————————————————————
     TYPOGRAPHY
     ——————————————————————————————————————————————————————————————————————————— */
 
@@ -488,11 +558,12 @@ p {
     color: #c6c6c6
 }
 
-.sale-heading {
+.sub-heading {
     font-size: 2.4rem;
     font-weight: 900;
     display: table;
     margin: auto;
+    text-align: center;
 }
 
 .smaller-text {
@@ -636,6 +707,9 @@ only screen and (device-width: 393px) and (-webkit-device-pixel-ratio: 3), only 
     }
     .smaller-text {
         font-size: 3.6rem;
+    }
+    .sub-heading {
+        font-size: 4rem;;
     }
     .video-header .clip-text {
         height: calc(100% + 1px);
