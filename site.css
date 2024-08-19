@@ -44,6 +44,7 @@ body {
 }
 
 section,
+.cta,
 nav {
     display: grid;
     grid-template-columns: var(--default-grid);
@@ -54,10 +55,15 @@ nav {
 }
 
 div.section-content,
-div,nav-content {
-    color: var(--red);
+div,nav-content,
+div.cta span {
     grid-column-start: main-start;
     grid-column-end: main-end;
+}
+
+.padded.cta {
+    padding-block-start: 2rem;
+    background-color: #000;
 }
 
 section:not(.image) {
@@ -76,7 +82,8 @@ section.image img {
     width: 100%;
 }
 
-section.padded {
+section.padded,
+.padded {
     background-color: #161616;
     grid-template-columns: var(--padded-grid);
 }
@@ -293,10 +300,16 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 914px) {
+@media screen and (max-width: 958px) {
     nav ul {
         font-size: 1.5rem;
         gap: 2vw;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    nav .logo {
+        height: 1.8rem;
     }
 }
 
