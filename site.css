@@ -657,7 +657,7 @@ p {
     position: absolute;
     top: 0;
     width: 100%;
-    max-width: 120rem;
+    max-width: 90vw;
     height: 100%;
     padding: 4rem;
     display: flex;
