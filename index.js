@@ -14,25 +14,6 @@ for (i = 0; i < collapsible.length; i++) {
   });
 }
 
-// // Get the height of the body element
-// var bodyHeight = document.body.scrollHeight;
-
-// // Select the target element you want to set the height on
-// var targetElement = document.getElementsByClassName("parallax-layer-back");
-
-// // Set the height of the target element to match the body height
-// targetElement.style.height = bodyHeight + 'px';
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     var bodyHeight = document.body.offsetHeight;
-//     var targetElement = document.getElementsByClassName("parallax-layer-back");
-//     if (targetElement) {
-//         targetElement.style.height = bodyHeight + 'px';
-//     } else {
-//         console.error('Element with id "targetElement" not found.');
-//     }
-// });
-
 // image carousel
 if (document.querySelectorAll(".carousel").length > 0) {
   let carousels = document.querySelectorAll(".carousel");
