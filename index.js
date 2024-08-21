@@ -1,5 +1,6 @@
 var collapsible = document.getElementsByClassName("collapsible");
 
+
 for (i = 0; i < collapsible.length; i++) {
   collapsible[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -13,6 +14,18 @@ for (i = 0; i < collapsible.length; i++) {
     }
   });
 }
+
+document.querySelector('.scroll-button').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default anchor click behavior
+
+  const target = document.querySelector('#video-section-1'); // Select the target element
+  target.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target element smoothly
+
+  const audio = document.querySelector('.bike-noise'); // Select the audio element
+  audio.play(); // Play the audio
+});
+
+
 
 // image carousel
 if (document.querySelectorAll(".carousel").length > 0) {
