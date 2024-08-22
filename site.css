@@ -639,7 +639,7 @@ p {
     margin: 0;
 }
 
-.scroll-button{
+.vertical-scroll-button{
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -654,33 +654,34 @@ p {
     transition: opacity .3s;
 }
 
-.scroll-button span {
+.vertical-scroll-button span {
     position: absolute;
     top: 0;
     left: 50%;
     width: 24px;
     height: 24px;
     margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-animation: scroll 2s infinite;
     animation: scroll 2s infinite;
     opacity: 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
-.scroll-button span:nth-of-type(1) {
+.vertical-scroll-button span:nth-of-type(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
-.scroll-button span:nth-of-type(2) {
+.vertical-scroll-button span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
-.scroll-button span:nth-of-type(3) {
+.vertical-scroll-button span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
