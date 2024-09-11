@@ -1,8 +1,8 @@
 :root {
     --gap: 2rem;
-    --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
+    --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px, 100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
     --mobile-grid: [full-start] minmax(11px, 11px) [wide-start] minmax(11px, 11px) [main-start] min(980px, 100% - 44px) [main-end] minmax(11px, 11px) [wide-end] minmax(11px, 11px) [full-end];
-    --padded-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(940px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
+    --padded-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(940px, 100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end];
 }
 
 * {
@@ -20,12 +20,12 @@ b {
 body {
     background-color: #000;
     color: #fff;
-    margin:0;
+    margin: 0;
 }
 
 html,
 body {
-    scroll-behavior: smooth!important;
+    scroll-behavior: smooth !important;
 }
 
 .columns {
@@ -35,10 +35,11 @@ body {
     gap: var(--gap);
     font-size: 1.8rem;
     margin-block: 8rem 4rem;
-    justify-content: space-between;;
+    justify-content: space-between;
+    ;
 }
 
-.columns > * {
+.columns>* {
     width: 30%;
     min-width: 21.4rem;
 }
@@ -55,7 +56,8 @@ nav {
 }
 
 div.section-content,
-div,nav-content,
+div,
+nav-content,
 div.cta span {
     grid-column-start: main-start;
     grid-column-end: main-end;
@@ -75,7 +77,7 @@ section:not(.padded, .image) {
 }
 
 section.image {
-    display:block
+    display: block
 }
 
 section.image img {
@@ -174,7 +176,7 @@ footer .section-content {
     display: flex;
 }
 
-footer .section-content > * {
+footer .section-content>* {
     width: 50%;
 }
 
@@ -187,7 +189,7 @@ footer ul {
         flex-direction: column;
     }
 
-    footer .section-content > div {
+    footer .section-content>div {
         width: 100%;
     }
 }
@@ -371,7 +373,8 @@ nav ul li:hover {
     font-weight: 900;
     display: flex;
     justify-content: center;
-    padding-block: 1rem;;
+    padding-block: 1rem;
+    ;
 }
 
 /*  ———————————————————————————————————————————————————————————————————————————
@@ -401,7 +404,8 @@ nav ul li:hover {
 }
 
 .card-wrapper::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
+    display: none;
+    /* For Chrome, Safari, and Edge */
 }
 
 .card {
@@ -461,7 +465,7 @@ nav ul li:hover {
     SOCIAL SECTION
     ——————————————————————————————————————————————————————————————————————————— */
 
-.social-links > div {
+.social-links>div {
     display: flex;
     flex-direction: column;
 }
@@ -485,7 +489,7 @@ nav ul li:hover {
 }
 
 .social-links .section-content i:hover {
-    transform:scale(1.2)
+    transform: scale(1.2)
 }
 
 .social-links .sub-heading {
@@ -499,10 +503,8 @@ i.fa-youtube:hover {
 
 i.fa-instagram:hover {
     background: #fff;
-    background: linear-gradient(
-        to right,
-        #fff,#fff
-    );
+    background: linear-gradient(to right,
+            #fff, #fff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -510,10 +512,8 @@ i.fa-instagram:hover {
 
 i.fa-instagram:hover {
     background: #833ab4;
-    background: linear-gradient(
-        to right,
-        #833ab4,#fd1d1d,#fcb045
-    );
+    background: linear-gradient(to right,
+            #833ab4, #fd1d1d, #fcb045);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -530,6 +530,10 @@ i.fa-compass:hover {
 /*  ———————————————————————————————————————————————————————————————————————————
     TYPOGRAPHY
     ——————————————————————————————————————————————————————————————————————————— */
+
+a {
+    text-decoration: none;
+}
 
 body {
     line-height: 1.6;
@@ -556,12 +560,28 @@ etc */
     -webkit-text-fill-color: transparent;
 }
 
-h1, h2 {
+.gradient-text.link {
+    background: -webkit-linear-gradient(45deg, #731DD8, #779EFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text.link:hover {
+    background: -webkit-linear-gradient(45deg, #E87AFF, #D2A8FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+h1,
+h2 {
     font-size: 7rem;
     line-height: 1.2;
 }
 
-h3, h4 {
+h3,
+h4 {
     letter-spacing: 1;
     margin-top: 0;
 }
@@ -632,14 +652,14 @@ p {
 }
 
 .video-header .clip-text p {
-    font-size:21vw;
+    font-size: 21vw;
     line-height: 1;
     font-weight: 900;
     font-family: helvetica;
     margin: 0;
 }
 
-.vertical-scroll-button{
+.vertical-scroll-button {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -676,11 +696,13 @@ p {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
+
 .vertical-scroll-button span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
+
 .vertical-scroll-button span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
@@ -691,20 +713,25 @@ p {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
-    }
-    @keyframes scroll {
+}
+
+@keyframes scroll {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -739,7 +766,7 @@ p {
 }
 
 .video-section .video-text p {
-    font-size:8vw;
+    font-size: 8vw;
     line-height: 10vw;
     font-weight: 900;
     font-family: helvetica;
@@ -755,7 +782,8 @@ p {
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
     overflow: hidden;
 }
 
@@ -788,7 +816,7 @@ p {
         padding-block: 5rem;
     }
 
-    .columns > * {
+    .columns>* {
         width: 100%;
     }
 }
@@ -801,54 +829,70 @@ p {
 
 /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
 @media only screen and (device-width: 430px) and (-webkit-device-pixel-ratio: 3),
-only screen and (device-width: 393px) and (-webkit-device-pixel-ratio: 3), only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+only screen and (device-width: 393px) and (-webkit-device-pixel-ratio: 3),
+only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
     -webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Edge */
+        display: none;
+        /* For Chrome, Safari, and Edge */
     }
+
     section.padded .section-content {
         padding: 6rem;
     }
+
     body {
         font-size: 4rem;
         font-weight: 500;
     }
+
     nav {
         display: none;
     }
-    .columns > * {
+
+    .columns>* {
         width: 100%;
         font-size: 3.5rem;
     }
+
     .card {
         min-width: 80vw;
         font-size: 3.5rem;
         padding: 6rem;
         border-radius: 4rem;
     }
+
     .scroll-control-holder {
         display: none;
     }
+
     section.without-grid:has(.scroll-container) {
         padding-block: 0;
         padding-block-end: 10rem;
     }
+
     button {
         width: 8rem;
         height: 8rem;
         font-size: 4rem;
     }
+
     footer .section-content {
         flex-direction: column;
     }
-    footer .section-content > * {
+
+    footer .section-content>* {
         width: 100%;
     }
+
     .smaller-text {
         font-size: 3.6rem;
     }
+
     .sub-heading {
-        font-size: 4rem;;
+        font-size: 4rem;
+        ;
     }
+
     .video-header .clip-text {
         height: calc(100% + 1px);
     }

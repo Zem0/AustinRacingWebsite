@@ -25,8 +25,6 @@ document.querySelector('.vertical-scroll-button').addEventListener('click', func
   audio.play(); // Play the audio
 });
 
-
-
 // image carousel
 if (document.querySelectorAll(".carousel").length > 0) {
   let carousels = document.querySelectorAll(".carousel");
@@ -103,38 +101,38 @@ if (document.querySelectorAll(".carousel").length > 0) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const scrollContainer = document.querySelector('.card-wrapper');
   const leftButton = document.querySelector('.scroll-button.left');
   const rightButton = document.querySelector('.scroll-button.right');
 
   function getCardWidthWithMargin() {
-      const card = scrollContainer.querySelector('.card');
-      const cardStyle = getComputedStyle(card);
-      const cardWidth = card.offsetWidth;
-      const cardMarginRight = parseInt(cardStyle.marginRight);
-      return cardWidth + cardMarginRight;
+    const card = scrollContainer.querySelector('.card');
+    const cardStyle = getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const cardMarginRight = parseInt(cardStyle.marginRight);
+    return cardWidth + cardMarginRight;
   }
 
   function scrollToNextCard(direction) {
-      const cardWidthWithMargin = getCardWidthWithMargin();
-      const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
-      const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
+    const cardWidthWithMargin = getCardWidthWithMargin();
+    const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
+    const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
 
-      // Adjust scrolling position to include padding
-      if (direction === 1) {
-          scrollContainer.scrollBy({ left: cardWidthWithMargin, behavior: 'smooth' });
-      } else {
-          scrollContainer.scrollBy({ left: -cardWidthWithMargin, behavior: 'smooth' });
-      }
+    // Adjust scrolling position to include padding
+    if (direction === 1) {
+      scrollContainer.scrollBy({ left: cardWidthWithMargin, behavior: 'smooth' });
+    } else {
+      scrollContainer.scrollBy({ left: -cardWidthWithMargin, behavior: 'smooth' });
+    }
   }
 
   function updateButtons() {
-      const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
-      const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
+    const paddingLeft = parseInt(getComputedStyle(scrollContainer).paddingLeft);
+    const paddingRight = parseInt(getComputedStyle(scrollContainer).paddingRight);
 
-      leftButton.disabled = scrollContainer.scrollLeft <= paddingLeft;
-      rightButton.disabled = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - paddingRight;
+    leftButton.disabled = scrollContainer.scrollLeft <= paddingLeft;
+    rightButton.disabled = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - paddingRight;
   }
 
   leftButton.addEventListener('click', () => scrollToNextCard(-1));
@@ -145,24 +143,24 @@ document.addEventListener('DOMContentLoaded', function () {
   updateButtons();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   // Select all Vimeo iframes
   const iframes = document.querySelectorAll('.video-wrapper iframe');
 
   // Create a new Intersection Observer
   const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          const iframe = entry.target;
-          const player = new Vimeo.Player(iframe);
+    entries.forEach(entry => {
+      const iframe = entry.target;
+      const player = new Vimeo.Player(iframe);
 
-          if (entry.isIntersecting) {
-              // If the iframe is in view, play the video
-              player.play();
-          } else {
-              // If the iframe is out of view, pause the video
-              player.pause();
-          }
-      });
+      if (entry.isIntersecting) {
+        // If the iframe is in view, play the video
+        player.play();
+      } else {
+        // If the iframe is out of view, pause the video
+        player.pause();
+      }
+    });
   }, { threshold: 0.5 });
 
   // Observe each iframe
